@@ -1,2 +1,5 @@
 streamlit
 pillow
+opencv-python
+ultralytics
+requests
