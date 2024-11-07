@@ -119,7 +119,7 @@ def main():
     st.markdown(
     """
     <div style='text-align: center;'>
-        <h2>🔥 <strong>Forest Fire Detection App</strong></h2>
+        <h2><strong>Forest Fire Detection App</strong></h2>
         <p>Welcome to our Project Forest Fire Detection!</p>
         <h3>🌍 <strong>Preventing Forest Fire with Computer Vision</strong></h3>
         <p>Our goal is to prevent Forest Fire by detecting fire and smoke in images with high accuracy and speed.</p>
