@@ -159,7 +159,23 @@ def main():
     st.markdown("---")
 
     # Set confidence and IOU thresholds
-    
+    col1, col2 = st.columns(2)
+    with col2:
+        conf_threshold = st.slider("Confidence Threshold", 0.0, 1.0, 0.20, 0.05)
+        with st.expander("What is Confidence Threshold?"):
+            st.caption("The Confidence Threshold is a value between 0 and 1.")
+            st.caption("It determines the minimum confidence level required for an object detection.")
+            st.caption("If the confidence of a detected object is below this threshold, it will be ignored.")
+            st.caption("You can adjust this threshold to control the number of detected objects.")
+            st.caption("Lower values make the detection more strict, while higher values allow more detections.")
+    with col1:
+        iou_threshold = st.slider("IOU Threshold", 0.0, 1.0, 0.5, 0.05)
+        with st.expander("What is IOU Threshold?"):
+            st.caption("The IOU (Intersection over Union) Threshold is a value between 0 and 1.")
+            st.caption("It determines the minimum overlap required between the predicted bounding box")
+            st.caption("and the ground truth box for them to be considered a match.")
+            st.caption("You can adjust this threshold to control the precision and recall of the detections.")
+            st.caption("Higher values make the matching more strict, while lower values allow more matches.")
 
     # Add a section divider
     st.markdown("---")
